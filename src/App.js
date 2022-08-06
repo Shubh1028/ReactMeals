@@ -3,10 +3,12 @@ import Header from './componenets/Layout/Header'
 import MealsSummary from './componenets/Meals/MealsSummary';
 import AvailableMeals from './componenets/Meals/AvailableMeals';
 import Meals from './componenets/Meals/Meals'
+import CartOrder from './componenets/Cart/CartOrder';
 
 function App() {
   return (
    <Fragment>
+    <CartOrder/>
     <Header/>
     <main>
     <Meals/>
