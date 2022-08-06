@@ -1,0 +1,15 @@
+.food-item {
+    margin: 1rem 1rem;
+}
+.food-item div:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.food-item div:nth-child(2){
+    font-style: italic;
+}
+.food-item div:nth-child(3){
+    color: #ad5502;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
