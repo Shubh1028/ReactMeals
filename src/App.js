@@ -2,13 +2,15 @@ import React, {Fragment} from 'react';
 import Header from './componenets/Layout/Header'
 import MealsSummary from './componenets/Meals/MealsSummary';
 import AvailableMeals from './componenets/Meals/AvailableMeals';
+import Meals from './componenets/Meals/Meals'
 
 function App() {
   return (
    <Fragment>
     <Header/>
-    <MealsSummary/>
-    <AvailableMeals/>
+    <main>
+    <Meals/>
+    </main>
 
    </Fragment>
   );
