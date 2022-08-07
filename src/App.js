@@ -1,15 +1,25 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import Header from './componenets/Layout/Header'
-import MealsSummary from './componenets/Meals/MealsSummary';
-import AvailableMeals from './componenets/Meals/AvailableMeals';
 import Meals from './componenets/Meals/Meals'
 import CartOrder from './componenets/Cart/CartOrder';
 
-function App() {
+function App(props) {
+
+  const [cartItem, showCartItem] = useState(false)
+
+  const showCartHandler = () => {
+    showCartItem(true);
+  }
+
+  const hideCartHandler = () => {
+    showCartItem(false);
+  }
+
+
   return (
    <Fragment>
-    <CartOrder/>
-    <Header/>
+   {cartItem && <CartOrder onHideCart={hideCartHandler}/>  }
+    <Header onShowCart={showCartHandler}/>
     <main>
     <Meals/>
     </main>
