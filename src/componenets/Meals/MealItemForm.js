@@ -9,7 +9,7 @@ const MealItemForm = (props) => {
     const addItemToCart = (event) => {
         event.preventDefault();
         const quantity = document.getElementById(props.id).value;
-       ctx.addItem({...props.item, quantity: quantity})
+       ctx.addItem({...props.item, quantity: Number(quantity)})
     //    console.log(props)
     }
 
@@ -17,7 +17,7 @@ const MealItemForm = (props) => {
     return (<form className={classes.form}>
         <div className={classes.input}>
         <label htmlFor="amount">Amount</label>
-        <input id={props.id} type='number' min='1' max='5' step='1'/>
+        <input id={props.id} type='number'/>
         </div>
         <button className={classes.btn} onClick={addItemToCart}>+ Add</button>
     </form>)

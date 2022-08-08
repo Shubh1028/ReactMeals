@@ -6,7 +6,7 @@ import "./HeaderCart.css";
 
 const HeaderCart = (props) => {
   const ctx = useContext(CartContext)
-  console.log(ctx.items)
+  // console.log(ctx.items)
   // console.log(ctx.items.quantity)
   let quantity = 0;
   ctx.items.map(item => {
