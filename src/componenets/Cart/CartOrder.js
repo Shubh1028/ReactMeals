@@ -1,14 +1,19 @@
+import React, {useContext} from 'react';
 import Modal from '../UI/Modal';
 import classes from './CartOrder.module.css';
+import CartContext from '../../Store/cart-context';
 
 const CartOrder = (props) => {
+  const ctx = useContext(CartContext)
   const cartItems = (
     <ul className={classes['cart-items']}>
-      {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
-        <li>{item.name}</li>
+      {ctx.items.map((item) => (
+        <li>Name: {item.name} Price: {item.price} Quantity: {item.quantity}</li>
       ))}
     </ul>
   );
+
+
 
   return (
     <Modal onHideCart={props.onHideCart}>
